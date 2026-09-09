@@ -7,54 +7,48 @@ O seletor é feito inteiramente com HTML e CSS, utilizando Javascript apenas par
 ![Semonstração](demonstracao_seletor)
 
 ### Lógica do CSS:
-"""
- /* ---------------- Estilo padrão do seletor ---------------- */
-        #seletor {
-            background: linear-gradient(90deg,#FFD54F,#4FC3F7,#87CEEB);            
-            width: 100px;
-            height: 30px;
-            border-radius: 30px;
-            padding: 3px 3px 5px 5px;
-            transition: all .8s ease;
-            position: relative;
-            overflow: hidden;
+### Lógica do CSS
 
-            margin-left:0;
-        }
-        #seletor::after{
-            content:"";
-            position:absolute;
-            inset:0;
-            background:linear-gradient(90deg,#071330,#132A63,#263238);
-            opacity:0;
-            transition:opacity .8s ease;
-            border-radius:30px;
-        }
+```css
+#seletor {
+    background: linear-gradient(90deg, #FFD54F, #4FC3F7, #87CEEB);
+    width: 100px;
+    height: 30px;
+    border-radius: 30px;
+    padding: 3px 3px 5px 5px;
+    transition: all 0.8s ease;
+    position: relative;
+    overflow: hidden;
+    margin-left: 0;
+}
 
-                    /* seletor para modo escuro */
-        #seletor.dark_mode::after{
-            opacity:1;
-        }
-        /* ---------------------------------------------------------- */
+#seletor::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #071330, #132A63, #263238);
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    border-radius: 30px;
+}
 
-        /* ----------------- Botão interno do seletor --------------- */
-        #btn_seletor{
-            position:relative;
-            z-index:1;
-        }
-        #btn_seletor {
-            background-color: yellow;
-            border-radius: 50%;
-            width: 30px;
-            height: inherit;    
-            transition: all .8s ease;
-            margin-left: 0; /* Restaura a margem esquerda ara zero, assim o botão volta para a posição inicial*/
-        }
+#seletor.dark_mode::after {
+    opacity: 1;
+}
 
-                /* Botão do seletor para o modo escuro */
-        #seletor.dark_mode #btn_seletor {
-            background-color: white; /* Muda a cor para o branco, para assemelhar-se a lua */
-            margin-left: 67px; /* Adiciona uma margem de 67 pixels (ou seja, a largula do seletor menos o padding direito) */
-        }
-        /* ---------------------------------------------------------- */
-"""
+#btn_seletor {
+    position: relative;
+    z-index: 1;
+    background-color: yellow;
+    border-radius: 50%;
+    width: 30px;
+    height: inherit;
+    transition: all 0.8s ease;
+    margin-left: 0;
+}
+
+#seletor.dark_mode #btn_seletor {
+    background-color: white;
+    margin-left: 67px;
+}
+```
