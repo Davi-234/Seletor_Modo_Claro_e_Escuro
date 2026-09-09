@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquerry.js"></script>
+    <style>
+        html, body {
+            height: 100%;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #seletor {
+            background: linear-gradient(90deg,#FFD54F,#4FC3F7,#87CEEB);            
+            width: 100px;
+            height: 30px;
+            border-radius: 30px;
+            padding: 3px 3px 5px 5px;
+            transition: all .8s ease;
+            position: relative;
+            overflow: hidden;
+
+            margin-left:0;
+        }
+        #seletor::after{
+            content:"";
+            position:absolute;
+            inset:0;
+            background:linear-gradient(90deg,#071330,#132A63,#263238);
+            opacity:0;
+            transition:opacity .8s ease;
+            border-radius:30px;
+        }
+        #seletor.dark_mode::after{
+            opacity:1;
+        }
+        #btn_seletor{
+            position:relative;
+            z-index:1;
+        }
+        #btn_seletor {
+            background-color: yellow;
+            border-radius: 50%;
+            width: 30px;
+            height: inherit;    
+            transition: all .8s ease;
+            margin-left: 0;
+        }
+        #seletor.dark_mode #btn_seletor {
+            background-color: white;
+            margin-left: 67px;
+        }
+    </style>
+</head>
+<body>
+    <div id="seletor">
+        <div id="btn_seletor"></div>
+    </div>
+</body>
+<script>
+    // Torna o seletor funcional ao clique
+    document.getElementById('seletor').addEventListener('click', function () {
+        this.classList.toggle('dark_mode');
+    });
+</script>
+</html>
