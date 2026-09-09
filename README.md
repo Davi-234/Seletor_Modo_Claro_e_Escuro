@@ -1,5 +1,5 @@
 # Descrição
-Um seletor customizado, com temática de dia e noite, para alternar entre os modos escuro (noite) e claro (dia) de um site.O seletor é feito inteiramente com HTML e CSS, utilizando JavaScript apenas para tornar possível o clique no seletor. 
+Um seletor customizado, com temática de dia e noite, para alternar entre os modos escuro (noite) e claro (dia) de um site. O seletor é feito inteiramente com HTML e CSS, utilizando JavaScript apenas para tornar possível o clique no seletor. 
 
 ### Tecnologias:
 - HTML
@@ -10,7 +10,8 @@ Um seletor customizado, com temática de dia e noite, para alternar entre os mod
 ![Demonstração](demonstracao_seletor)
 
 ### CSS
-O CSS é composto por pseudo-elementos, classes e animações de transição para a mudança das cores do seletor e do botão dentro dele, e transição para o deslocamento do botão para o final, ou ínicio do seletor.
+O CSS é composto por pseudo-elementos, classes e animações de transição responsáveis pela mudança das cores do seletor e do botão interno, bem como pelo deslocamento do botão para o início ou para o final do seletor.
+O elemento `#btn-seletor` é posicionado sobre o seletor, cuja posição é definida como relativa. Isso permite que o botão se sobreponha ao seletor, criando a sensação de que o componente constitui uma variação de um campo de entrada (`input`) padrão do HTML.
 
 ```css
 /* ---------------- Estilo padrão do seletor ---------------- */
