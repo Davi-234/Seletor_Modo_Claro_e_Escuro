@@ -1,13 +1,12 @@
-# Descrição:
+# Descrição
 Um seletor customizado, com temática de dia e noite, para alternar entre os modos escuro (noite) e claro (dia) de um site.
 ### Tecnologias:
 O seletor é feito inteiramente com HTML e CSS, utilizando Javascript apenas para tornar possível o clique no seletor. O CSS é composto por pseudo-seletores e animações de transcição para a mudança das cores do seletor e do botão dentro dele.
 
-## Demonstraçã Seletor:
+## Demonstração Seletor
 ![Semonstração](demonstracao_seletor)
 
-### Lógica do CSS:
-### Lógica do CSS
+### CSS
 
 ```css
 #seletor {
@@ -51,4 +50,18 @@ O seletor é feito inteiramente com HTML e CSS, utilizando Javascript apenas par
     background-color: white;
     margin-left: 67px;
 }
+```
+
+### HTML
+```html
+<div id="seletor">
+        <div id="btn_seletor"></div>
+</div>
+```
+
+### JS
+```js
+document.getElementById('seletor').addEventListener('click', function () {
+        this.classList.toggle('dark_mode');
+});
 ```
