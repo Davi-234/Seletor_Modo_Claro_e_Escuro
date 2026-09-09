@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="jquerry.js"></script>
     <style>
+        /* ----------------- Reset's e regras de praxe -------------------- */
         html, body {
             height: 100%;
         }
@@ -14,6 +14,9 @@
             justify-content: center;
             align-items: center;
         }
+        /* ---------------------------------------------------------- */
+
+        /* ---------------- Estilo padrão do seletor ---------------- */
         #seletor {
             background: linear-gradient(90deg,#FFD54F,#4FC3F7,#87CEEB);            
             width: 100px;
@@ -35,9 +38,14 @@
             transition:opacity .8s ease;
             border-radius:30px;
         }
+
+                    /* seletor para modo escuro */
         #seletor.dark_mode::after{
             opacity:1;
         }
+        /* ---------------------------------------------------------- */
+
+        /* ----------------- Botão interno do seletor --------------- */
         #btn_seletor{
             position:relative;
             z-index:1;
@@ -48,12 +56,15 @@
             width: 30px;
             height: inherit;    
             transition: all .8s ease;
-            margin-left: 0;
+            margin-left: 0; /* Restaura a margem esquerda ara zero, assim o botão volta para a posição inicial*/
         }
+
+                /* Botão do seletor para o modo escuro */
         #seletor.dark_mode #btn_seletor {
-            background-color: white;
-            margin-left: 67px;
+            background-color: white; /* Muda a cor para o branco, para assemelhar-se a lua */
+            margin-left: 67px; /* Adiciona uma margem de 67 pixels (ou seja, a largula do seletor menos o padding direito) */
         }
+        /* ---------------------------------------------------------- */
     </style>
 </head>
 <body>
