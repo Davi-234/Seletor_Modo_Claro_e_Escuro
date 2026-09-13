@@ -54,13 +54,13 @@ O elemento `#btn-seletor` é posicionado sobre o seletor, cuja posição é defi
     width: 30px;
     height: inherit;    
     transition: all .8s ease;
-    margin-left: 0; /* Restaura a margem esquerda ara zero, assim o botão volta para a posição inicial*/
+    margin-left: 0; /* Restaura a margem esquerda para zero, assim o botão volta para a posição inicial*/
 }
 
     /* Botão do seletor para o modo escuro */
 #seletor.dark_mode #btn_seletor {
     background-color: white; /* Muda a cor para o branco, para assemelhar-se a lua */
-    margin-left: 67px; /* Adiciona uma margem de 67 pixels (ou seja, a largula do seletor menos o padding direito) */
+    margin-left: 67px; /* Adiciona uma margem de 67 pixels (ou seja, a largura do seletor menos o padding direito) */
 }
 /* ---------------------------------------------------------- */
 ```
